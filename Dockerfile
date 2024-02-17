@@ -6,8 +6,10 @@ WORKDIR /app
 # 將本地目錄內的程式碼複製到容器的 /app 目錄中
 COPY . /app
 
-RUN pip3 install -r requirements.txt
-
+# g++ for newest version of pandas 
+# if you want to use pandas without g++ use pandas==1.2.4 instead
+RUN apk add g++ && \ 
+    pip3 install -r requirements.txt
 
 # 定義容器運行時的預設命令
 CMD [ "python", "main.py" ]
