@@ -10,14 +10,10 @@ RUN apt-get install -y --no-install-recommends \
         g++ \
     && pip install --no-cache-dir --prefix=/install -r requirements.txt
 
-# Second Stage: Final Stage
-FROM --platform=linux/x86_64 python:3.9-slim-buster
-
-# 設定工作目錄為 /app
-WORKDIR /app
-
-# Copy only the necessary files from the build stage
-COPY --from=builder /install /usr/local
+# g++ for newest version of pandas 
+# if you want to use pandas without g++ use pandas==1.2.4 instead
+RUN pip install shioaji-1.2.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl
+RUN pip install --no-cache-dir pandas
 
 # Copy application code
 COPY . .
