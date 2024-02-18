@@ -1,9 +1,6 @@
 1. 請在config 檔案中，輸入 shioaji 帳號的 api key 及 secret key
 2. 下指令 python main.py --stock 2330 --date 20240103
 
-<!-- ## build image
-docker build -t shioaji_doc . -->
-
 ## First Build
 ```sh
 cd base
@@ -18,6 +15,9 @@ sh build.sh
 - for run `sh run.sh`
 - for connect `sh connect.sh`
 - for build run and connect `sh lazy.sh`
+
+## build image
+docker build -t shioaji_doc .
 
 ## run container
 docker run -v /local_path/data shioaji_doc --stock 2330 --date 20240215
