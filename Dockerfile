@@ -5,6 +5,7 @@ WORKDIR /app
 
 # 將本地目錄內的程式碼複製到容器的 /app 目錄中
 ADD main.py /app
+ADD config.py /app
 ADD run_python.sh /app
 
 # 定義容器運行時的預設命令
