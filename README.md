@@ -13,11 +13,11 @@ sh build.sh
 ```
 
 ### scripts
-for cleanup all containers `sh cleanup.sh`
-for quick build `sh build.sh`
-for run `sh run.sh`
-for connect `sh connect.sh`
-for build run and connect `sh lazy.sh`
+- for cleanup all containers `sh cleanup.sh`
+- for quick build `sh build.sh`
+- for run `sh run.sh`
+- for connect `sh connect.sh`
+- for build run and connect `sh lazy.sh`
 
 ## run container
 docker run -v /local_path/data shioaji_doc --stock 2330 --date 20240215
