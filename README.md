@@ -3,9 +3,7 @@
 
 ## First Build
 ```sh
-cd base
-sh build.sh
-cd ..
+sh base/build.sh
 sh build.sh
 ```
 
