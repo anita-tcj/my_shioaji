@@ -1,8 +1,8 @@
 1. 請在config 檔案中，輸入 shioaji 帳號的 api key 及 secret key
 2. 下指令 python main.py --stock 2330 --date 20240103
 
-## build image
-; docker build -t shioaji_doc .
+<!-- ## build image
+docker build -t shioaji_doc . -->
 
 ## First Build
 ```sh
